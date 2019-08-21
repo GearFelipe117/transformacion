@@ -1,0 +1,64 @@
+<html>
+
+    <head>
+
+        <title> mi hoja de vida </title>
+		<link rel = "stylesheet" type = "text/css" href = "estilos\estilo.css" >
+
+
+    </head>
+
+    <body>
+	    
+        <br/>
+        <img src="imagenes\brad.png">
+		
+		<h1 align = "center"><a  href="https://www.elcolombiano.com/">$name</a></h1> <hr/>
+		<br/>
+		<br/>
+		<hr/>
+		<p> hola, me llamo felipe, tengo 20 años vivo en medellin y blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa    </p> <hr/>
+		
+		
+	    <h2> Estudios </h2> 
+		
+		<br/>
+		
+		<table>
+        <tr>
+		   <td><strong>carrera:</strong></td>
+		   <td>  ingenieria en telecomunicaciones </td>
+
+		</tr>
+		
+		<tr>
+		   <td><strong>nombre:</strong></td>
+		   <td>  luis felipe zapata vasquez</td>
+
+		</tr>
+		
+		<tr>
+		   <td><strong>universidad:</strong></td>
+		   <td>  UDEM </td>
+
+		</tr>
+		
+		<tr>
+		    <td><strong>Colegio:</strong></td>
+		    <td>             C.P.C.S </td>
+
+		</tr>
+		
+		
+		</table>
+		<br/>
+		<hr/>
+		
+		
+	  <h3> hola de nuevo </h3>
+
+    </body>
+
+
+
+</html>

@@ -16,26 +16,42 @@ import org.apache.velocity.app.VelocityEngine;
  */
 public class Vm {
     
-    private Persona per;
+    
+    
 
-    public Vm(Persona per) {
-        this.per = per;
+    private VelocityEngine velocityEngine;
+    private VelocityContext context;
+    private org.apache.velocity.Template template;
+    
+
+    public Vm() {
+        
+        this.init();
     }
-    
-    public void transformar(Persona per){
-    
-        VelocityEngine velocityEngine = new VelocityEngine();
+ 
+    public void init() {
+
+        velocityEngine = new VelocityEngine();
         velocityEngine.init();
+        template = velocityEngine.getTemplate("vm/hojadevida.vm"); // aqui la ruta relativa del bm dentro del src
+        context = new VelocityContext();
 
-        org.apache.velocity.Template t = velocityEngine.getTemplate("index.vm");
+    }
 
-        VelocityContext context = new VelocityContext();
-        context.put("name", "World");
+    public StringWriter transformar(Persona per) {
 
+        context.put("name", per.getNombre());// es tipo clave valor y es la que debe aparecer en el vm ( $name)
+        context.put("descripcion", per.getPerfil());
+        context.put("foto",per.getFoto());
+        
         StringWriter writer = new StringWriter();
-        t.merge(context, writer);
+        template.merge(context, writer);
+        
+        return writer;
 
     }
     
     
+    
+
 }

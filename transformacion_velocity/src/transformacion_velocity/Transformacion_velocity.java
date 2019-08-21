@@ -5,6 +5,7 @@
  */
 package transformacion_velocity;
 
+import java.io.StringWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -29,7 +30,13 @@ public class Transformacion_velocity {
         per.getEstudios().add(new Estudio ("UDEM","Ingenieria en Telecomunicaciones",d)); // cuidado por el new estudiantes
         
         
-        Vm vel = new Vm(per);
+        Vm vel = new Vm();
+        
+        StringWriter escritor = vel.transformar(per);
+        
+        System.out.println(escritor);
+        
+        
         
     }
     

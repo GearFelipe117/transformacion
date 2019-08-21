@@ -60,10 +60,5 @@ public class Persona {
         this.estudios = estudios;
     }
     
-    
-    
-    
-    
-    
-    
+
 }
